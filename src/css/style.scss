@@ -1,0 +1,1306 @@
+@import "normalize.css";
+@import "reset.css";
+
+
+* {
+    border: 1px solid red;
+}
+
+@font-face {
+    font-family: "Monserat-regular";
+    src: url('/fonts/Montserrat-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Monserat-semiBold";
+    src: url('/fonts/Montserrat-SemiBold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html {
+    font-family: "Monserat-regular";
+}
+
+.container {
+    max-width: 1290px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.main-section {
+    /* z-index: -3;  */
+    position: relative;
+    min-height: 800px;
+    background-color: #D5D1D1;
+    padding-top: 20px;
+    overflow: hidden;
+
+    &__nav-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 80px;
+        align-items: center;
+        margin-bottom: 125px;
+    }
+
+    &__img {
+        margin: 0 auto;
+    }
+
+    &__content-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        z-index: 1;
+    }
+
+    &__first-elipse {
+        z-index: -1;
+        position: absolute;
+        top: 10px;
+        right: 35px;
+    }
+
+    &__second-elipse {
+        position: absolute;
+        top: 663px;
+        right: -150px;
+    }
+
+
+}
+
+
+.nav-menu {
+    z-index: 0;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    &__item {
+        margin-right: 20px;
+        font-size: 20px;
+        font-family: 'Roboto';
+        font-weight: bold;
+    }
+
+    &__item:last-child {
+        margin-right: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000000;
+
+    }
+
+}
+
+.left-side {
+    position: relative;
+
+    img {
+        position: relative;
+        z-index: 4;
+    }
+
+    &__red-block {
+        width: 600px;
+        height: 185px;
+        background-color: #F97D7D;
+        border-radius: 70px;
+        transform: rotate(-45deg);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        position: absolute;
+        top: 110px;
+        left: -50px;
+        z-index: 3;
+    }
+
+    &__blue-block {
+        width: 550px;
+        height: 185px;
+        background-color: #649DF2;
+        border-radius: 70px;
+        transform: rotate(-65deg);
+        box-shadow: -3px 0px 4px rgba(0, 0, 0, 0.25);
+        position: absolute;
+        top: 70px;
+        left: -90px;
+        z-index: 2;
+    }
+
+    &__grey-block {
+        width: 550px;
+        height: 185px;
+        background-color: #E6E6E6;
+        border-radius: 70px;
+        transform: rotate(-25deg);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        position: absolute;
+        top: 160px;
+        left: 20px;
+        z-index: 1;
+    }
+}
+
+
+
+.right-side {
+    width: 390px;
+
+    img {
+        margin-right: 20px;
+
+    }
+
+    img:last-child {
+        margin-right: 0;
+    }
+
+    &__social {
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+    &__text {
+        p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+    }
+
+
+
+
+}
+
+.buttons {
+    display: inline-flex;
+
+    &__main-button {
+        font-size: 20px;
+        color: #FFFFFF;
+        border: 0px;
+        margin-right: 30px;
+        width: 200px;
+        height: 60px;
+        border-radius: 30px;
+        background-color: #F97D7D;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &__icons-chat {
+        /* position: relative; */
+        display: inline-flex;
+        align-items: center;
+
+        p {
+            margin: 0;
+            font-size: 15px;
+        }
+    }
+
+    img {
+        margin-right: 20px;
+
+    }
+}
+
+.title {
+    font-size: 75px;
+    position: relative;
+    margin-bottom: 15px;
+    font-weight: bold;
+
+    &__hr {
+        margin: 0;
+        width: 61px;
+        position: absolute;
+        bottom: 0px;
+        border: none;
+        border-top: 1px solid black;
+    }
+}
+
+.elipse {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background: linear-gradient(139.38deg, rgba(100, 157, 242, 0.78) 13.67%, #F97D7D 48.11%, #E6E6E6 84.02%);
+    border-radius: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_big {
+        width: 264px;
+        height: 264px;
+    }
+
+    &__subtract-elipse {
+        position: absolute;
+        width: 127.5px;
+        height: 127.5px;
+        background: #d9d9d9;
+        border-radius: 250px;
+        border: 1px solid #000000;
+        border: none;
+
+        &_big {
+            width: 198px;
+            height: 198px;
+        }
+    }
+
+
+}
+
+.about-section {
+    position: relative;
+    min-height: 700px;
+    padding-top: 40px;
+    overflow: hidden;
+
+    &__first-elipse {
+        z-index: -1;
+        position: absolute;
+        top: 360px;
+        left: 0px;
+    }
+
+    &__second-elipse {
+        z-index: -1;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+    }
+
+    h1 {
+        margin-bottom: 55px;
+    }
+
+    &__instrument-cards {
+
+        display: inline-flex;
+        /* flex-direction: row;
+        justify-content: center;
+        font-weight: bold; */
+
+
+    }
+
+    .elipse {
+        position: absolute;
+        width: 170px;
+        height: 170px;
+        background: linear-gradient(139.38deg, rgba(100, 157, 242, 0.78) 13.67%, #F97D7D 48.11%, #E6E6E6 84.02%);
+        border-radius: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__subtract-elipse {
+            position: absolute;
+            width: 127.5px;
+            height: 127.5px;
+            border-radius: 250px;
+            border: 1px solid #000000;
+            border: none;
+
+            &_white {
+                background: white;
+            }
+
+        }
+    }
+
+    .instruments {
+        margin-bottom: 55px;
+        position: relative;
+
+
+
+
+        &__electro {
+            background-color: #649DF2;
+            width: 355px;
+            height: 335px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            margin-right: 68px;
+
+            img {
+                padding-top: 13px;
+            }
+
+            p {
+                font-size: 36px;
+                font-weight: bold;
+                writing-mode: vertical-rl;
+                text-align: center;
+
+            }
+        }
+
+        &__acoustic {
+            background-color: #F97D7D;
+            width: 355px;
+            height: 335px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            margin-right: 68px;
+
+            img {
+                padding-top: 21px;
+                padding-left: 39px;
+            }
+
+            p {
+                font-size: 36px;
+                font-weight: bold;
+                writing-mode: vertical-rl;
+                text-align: center;
+                padding-left: 70px;
+
+            }
+        }
+
+        &__ukulele {
+            background-color: #E6E6E6;
+            width: 355px;
+            height: 335px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            img {
+                padding-top: 18px;
+
+            }
+
+            p {
+                font-size: 36px;
+                font-weight: bold;
+                writing-mode: vertical-rl;
+                text-align: center;
+                padding-left: 40px;
+
+            }
+        }
+    }
+
+    .numbers {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        img {
+            width: 60px;
+            height: 60px;
+            margin-right: 25px;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+
+            span {
+                font-size: 48px;
+                font-weight: bolder;
+            }
+        }
+
+
+        &__age {
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        &__hours {
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__students {
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__feedback {
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
+
+.third-section {
+    position: relative;
+    background: #E6E6E6;
+    min-height: 700px;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 150px;
+        padding-top: 21px;
+    }
+
+    &__left-side {
+        z-index: 1;
+    }
+
+    &__figure {
+        position: absolute;
+        top: 200px;
+        left: 150px;
+        z-index: -1;
+
+    }
+
+    &__first-elipse {
+        position: absolute;
+        top: 105px;
+        left: 245px;
+        z-index: -2;
+    }
+
+    &__right-side {
+        max-width: 560px;
+
+
+        p {
+            margin-bottom: 45px;
+        }
+    }
+
+}
+
+.title__hr-top {
+    bottom: 75px;
+}
+
+.footer {
+    position: relative;
+
+    &__container {
+        min-height: 344px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+
+    &__img {
+        position: absolute;
+        left: -300px;
+        top: 30px;
+    }
+}
+
+@media (max-width: 1199px) {
+
+    .container {
+        width: 960px;
+        position: relative;
+    }
+
+    .main-section {
+        min-height: 730px;
+    }
+
+    .main-section__img {
+        width: 600px;
+
+    }
+
+    .left-side__red-block {
+        width: 550px;
+    }
+
+    .left-side__blue-block {
+        width: 500px;
+    }
+
+    .left-side__grey-block {
+        width: 500px;
+    }
+
+    .main-section__first-elipse {
+        right: -80px
+    }
+
+    .about-section {
+        min-height: 630px;
+        position: relative;
+
+        .instruments {
+            display: flex;
+
+            &__electro {
+
+                width: 310px;
+                height: 310px;
+                margin-right: 30px;
+
+            }
+
+            &__acoustic {
+                width: 310px;
+                height: 310px;
+                margin-right: 30px;
+            }
+
+            &__ukulele {
+                width: 310px;
+                height: 310px;
+            }
+        }
+
+        .numbers {
+            &__age {
+                img {
+                    margin-right: 10px;
+                    width: 50px;
+                    height: 50px;
+                }
+
+                p {
+                    font-size: 15px;
+
+                    span {
+                        font-size: 35px;
+                    }
+                }
+
+            }
+
+            &__hours {
+                img {
+                    margin-right: 10px;
+                    width: 50px;
+                    height: 50px;
+                }
+
+                p {
+                    font-size: 15px;
+
+                    span {
+                        font-size: 35px;
+                    }
+                }
+
+            }
+
+            &__students {
+                img {
+                    margin-right: 10px;
+                    width: 50px;
+                    height: 50px;
+                }
+
+                p {
+                    font-size: 15px;
+
+                    span {
+                        font-size: 35px;
+                    }
+                }
+
+            }
+
+            &__feedback {
+                img {
+                    margin-right: 10px;
+                    width: 50px;
+                    height: 50px;
+                }
+
+                p {
+                    font-size: 15px;
+
+                    span {
+                        font-size: 35px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .third-section {
+        .container {
+            padding-left: 60px;
+        }
+
+        &__figure {
+            position: absolute;
+            top: 200px;
+            left: 0px;
+            z-index: -1;
+
+        }
+
+        &__first-elipse {
+            position: absolute;
+            top: 105px;
+            left: 100px;
+            z-index: -2;
+        }
+
+        .title {
+            font-size: 60px;
+
+            &__hr-top {
+                bottom: 60px;
+            }
+
+        }
+
+    }
+
+    .footer {
+        &__img {
+            left: -200px;
+        }
+    }
+
+}
+
+/* Убрать текст в 3 секции */
+@media (max-width: 1020px) {
+    .container {
+        width: 720px;
+        position: relative;
+
+    }
+
+    .main-section {
+        min-height: 730px;
+
+        &__second-elipse {
+            top: 630px;
+            right: -90px;
+        }
+    }
+
+    .main-section__img {
+        width: 400px;
+
+    }
+
+    .left-side__red-block {
+        width: 420px;
+        height: 150px;
+        top: 110px;
+        left: -50px;
+    }
+
+    .left-side__blue-block {
+        width: 400px;
+        height: 130px;
+        top: 100px;
+        left: -85px;
+    }
+
+    .left-side__grey-block {
+        width: 380px;
+        height: 150px;
+        top: 150px;
+        left: 0px;
+    }
+
+    .buttons {
+        &__main-button {
+            font-size: 14px;
+            margin-right: 20px;
+            width: 150px;
+            height: 50px;
+        }
+
+        &__icons-chat {
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .title {
+        font-size: 55px;
+    }
+
+
+
+    .about-section {
+        position: relative;
+
+        .instruments {
+            display: flex;
+
+            &__electro {
+
+                width: 310px;
+                height: 290px;
+                margin-right: 10px;
+
+                img {
+                    width: 170px;
+                    height: 230px;
+                    padding-top: 60px;
+                }
+
+                p {
+                    font-size: 30px;
+                }
+            }
+
+            &__acoustic {
+                width: 310px;
+                height: 290px;
+                margin-right: 10px;
+
+                img {
+                    width: 80px;
+                    height: 230px;
+                    padding-top: 60px;
+                }
+
+                p {
+                    font-size: 30px;
+                }
+            }
+
+            &__ukulele {
+                width: 310px;
+                height: 290px;
+
+                img {
+                    width: 160px;
+                    height: 230px;
+                    padding-top: 60px;
+                }
+
+                p {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        &__first-elipse {
+
+            left: -70px;
+        }
+
+        &__second-elipse {
+            top: 10px;
+            right: -120px;
+        }
+    }
+
+    .third-section {
+        .container {
+            padding-left: 20px;
+        }
+
+
+        &__left-side {
+            margin-right: 10px;
+        }
+
+        .title {
+            font-size: 60px;
+
+            &__hr-top {
+                bottom: 60px;
+            }
+
+        }
+
+
+
+    }
+}
+
+.footer {
+    .title {
+        &__hr {
+            bottom: 50px;
+        }
+    }
+}
+
+
+
+
+@media (max-width: 767px) {
+
+    .container {
+        width: 580px;
+    }
+
+    .nav-menu {
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 40%;
+        background: #649DF2;
+        z-index: 10;
+        transition: 0.5s all;
+
+        &__list {
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 100%;
+            align-items: center;
+        }
+
+        &__item {
+            font-size: 25px;
+            margin-right: 0;
+        }
+    }
+
+    .hamburger {
+        width: 30px;
+        height: 14px;
+        position: fixed;
+        top: 50px;
+        right: 30px;
+        z-index: 11;
+
+        span {
+            height: 2px;
+            width: 100%;
+            display: block;
+            background-color: #000000;
+            margin-bottom: 3px;
+            transition: 0.5s all;
+        }
+
+        span:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .hamburger-active {
+        height: 25px;
+
+        span {
+            margin-bottom: -2px;
+
+            &:nth-child(1) {
+                transform: translateY(10px) rotate(-45deg);
+            }
+
+            &:nth-child(2) {
+                display: none;
+            }
+
+            &:nth-child(3) {
+                transform: translateY(10px) rotate(45deg);
+            }
+        }
+    }
+
+    .nav-menu_active {
+        right: 0;
+    }
+
+    .main-section {
+        min-height: 460px;
+
+        &__header {
+            img {
+                height: 50px;
+                width: 100px;
+            }
+        }
+
+        &__nav-container {
+            margin-bottom: 60px
+        }
+
+        &__second-elipse {
+            top: 350px;
+        }
+    }
+
+    .main-section__first-elipse {
+        right: 0;
+        top: -20px;
+    }
+
+    .main-section__img {
+        width: 320px;
+
+    }
+
+    .left-side__red-block {
+        width: 340px;
+        height: 100px;
+        top: 70px;
+        left: -30px;
+    }
+
+    .left-side__blue-block {
+        width: 330px;
+        height: 100px;
+        top: 45px;
+        left: -60px;
+    }
+
+    .left-side__grey-block {
+        width: 340px;
+        height: 100px;
+        top: 100px;
+        left: -5px;
+    }
+
+    .right-side {
+        z-index: 8;
+
+        img {
+            margin-right: 10px;
+            width: 35px;
+            height: 35px;
+        }
+
+        &__text {
+            font-size: 13px;
+
+            p {
+                font-size: 13px;
+            }
+        }
+
+        .buttons {
+            &__main-button {
+                margin-right: 10px;
+                width: 130px;
+            }
+
+            &__icons-chat {
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+
+
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    .about-section {
+        min-height: 530px;
+
+        &__first-elipse {
+            left: -55px;
+            top: 200px;
+        }
+
+        &__second-elipse {
+            right: -40px;
+        }
+
+        .instruments {
+
+            &__electro {
+
+                width: 310px;
+                height: 210px;
+                margin-right: 10px;
+                justify-content: space-evenly;
+
+                img {
+                    width: 120px;
+                    height: 170px;
+                    padding-top: 40px;
+                }
+
+                p {
+                    font-size: 25px;
+                }
+            }
+
+            &__acoustic {
+                width: 310px;
+                height: 210px;
+                margin-right: 10px;
+
+                img {
+                    width: 65px;
+                    height: 175px;
+                    padding-top: 35px;
+                    padding-left: 15px;
+                }
+
+                p {
+                    font-size: 25px;
+                    padding-left: 50px;
+                }
+            }
+
+            &__ukulele {
+                width: 310px;
+                height: 210px;
+
+                img {
+                    width: 120px;
+                    height: 170px;
+                    padding-top: 40px;
+                }
+
+                p {
+                    font-size: 25px;
+                    padding-left: 20px;
+                }
+            }
+        }
+
+        .numbers {
+            &__age {
+                img {
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 0;
+                }
+
+                p {
+                    font-size: 13px;
+                    margin-right: 5px;
+
+                    span {
+                        font-size: 33px;
+                    }
+                }
+
+            }
+
+            &__hours {
+                img {
+                    width: 40px;
+                    height: 40px;
+
+                }
+
+                p {
+                    font-size: 13px;
+                    margin-right: 5px;
+
+                    span {
+                        font-size: 33px;
+                    }
+                }
+
+            }
+
+            &__students {
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                p {
+                    font-size: 13px;
+                    margin-right: 5px;
+
+                    span {
+                        font-size: 33px;
+                    }
+                }
+
+            }
+
+            &__feedback {
+                img {
+                    margin-right: 0;
+                    width: 40px;
+                    height: 40px;
+                }
+
+                p {
+                    font-size: 13px;
+
+                    span {
+                        font-size: 33px;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .third-section {
+        flex-wrap: wrap;
+        overflow: hidden;
+
+        &__container {
+            justify-content: center;
+            width: 600px;
+        }
+
+        &__left-title {
+            display: none;
+        }
+
+        &__figure {
+            top: 480px;
+            left: -30px;
+        }
+
+        &__first-elipse {
+            top: 10px;
+            left: 475px;
+        }
+
+        &__right-side {
+            z-index: 1;
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .container {
+            padding-left: 0;
+        }
+    }
+
+    .footer {
+        &__title {
+            font-size: 40px;
+
+        }
+
+        .title__hr {
+            bottom: 35px;
+        }
+
+        &__img {
+            left: -240px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+
+
+    .container {
+        width: 100%;
+    }
+
+    .main-section {
+        &__container {
+            position: relative;
+        } 
+        
+        &__first-elipse {
+            display: none;
+        }
+
+        .right-side {
+            position: absolute;
+            top: -40px;
+            left: 15%;
+        }
+
+        .left-side {
+            left: 20%;
+        }
+
+        .title {
+            margin-bottom: 5px;
+        }
+
+       
+    }
+
+    .about-section {
+        .instruments {
+            flex-direction: column;
+            align-items: center;
+
+            &__electro {
+                width: 240px;
+                margin-right: 0;
+                margin-bottom: 5px;
+                justify-content: center;
+            }
+
+            &__acoustic {
+                width: 240px;
+                justify-content: center;
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+
+            &__ukulele {
+                width: 240px;
+                justify-content: center;
+            }
+        }
+
+        &__first-elipse {
+            top: 640px;
+        }
+
+        .numbers {
+            flex-direction: column;
+
+            &__age {
+                margin-bottom: 10px;
+            }
+
+            &__hours {
+                margin-bottom: 10px;
+            }
+            &__students {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .footer {
+        &__container {
+            justify-content: center;
+        }
+        
+        &__img {
+            display: none;
+        }
+    }
+}
